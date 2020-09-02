@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #30C5ED;
+}
+
+header::after {
+  content:'';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 30px;
+  padding-top: 27px;
+
+  position: relative;
+}
+
+@media screen and (max-width:1290px){
+  nav li {
+    display: none;
+  }
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a::before {
+  content:'';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: black;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.skatepark {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.item a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.produce {
+  color: black;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.itempage {
+  display: flex;
+}
+
+.left-half {
+  flex: 1;
+  padding: 1rem;
+}
+
+.right-half {
+  flex: 1;
+  padding: 1rem;
+}
+
+.frends {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.about {
+  position: absolute;
+  font-size: 35px;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+footer {
+  padding-left: 5px;
+}
